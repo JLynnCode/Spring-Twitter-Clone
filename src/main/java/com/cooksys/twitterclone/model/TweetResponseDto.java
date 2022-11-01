@@ -2,6 +2,9 @@ package com.cooksys.twitterclone.model;
 
 import java.sql.Timestamp;
 
+import com.cooksys.twitterclone.entities.Tweet;
+import com.cooksys.twitterclone.entities.embeddable.User;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
