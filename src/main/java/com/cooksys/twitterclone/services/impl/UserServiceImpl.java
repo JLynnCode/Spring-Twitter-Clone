@@ -1,22 +1,42 @@
 package com.cooksys.twitterclone.services.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.cooksys.twitterclone.entities.embeddable.Credentials;
+import com.cooksys.twitterclone.entities.Credentials;
+import com.cooksys.twitterclone.entities.User;
+import com.cooksys.twitterclone.mappers.UserMapper;
 import com.cooksys.twitterclone.model.UserRequestDto;
 import com.cooksys.twitterclone.model.UserResponseDto;
+import com.cooksys.twitterclone.repositories.UserRepository;
 import com.cooksys.twitterclone.services.UserService;
 
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Service
-public class UserServiceImpl implements UserService {@Override
+public class UserServiceImpl implements UserService {
+	
+	private final UserMapper userMapper;
+	private final UserRepository userRepository;
+	
+	@Override
 	public List<UserResponseDto> getActiveUsers() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<User> allUsers = userRepository.findAll();
+		List<UserResponseDto> activeUsers = new ArrayList<>();
+		
+		for(User user : allUsers){
+			
+			if(!user.isDeleted()){
+				activeUsers.add(userMapper.entityToDto(user));
+			}
+		}
+		
+		return activeUsers;
+		
 	}
 
 	@Override
