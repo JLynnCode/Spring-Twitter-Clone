@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cooksys.twitterclone.model.HashtagDto;
 import com.cooksys.twitterclone.model.TweetResponseDto;
+import com.cooksys.twitterclone.services.HashtagService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -16,7 +17,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @RequestMapping
 public class HashtagController {
-
+	
+	private final HashtagService hashtagService;
+	
 	@GetMapping
 	public List<HashtagDto> getAllHashtags() {
 		return hashtagService.getAllHashtags();
@@ -26,5 +29,4 @@ public class HashtagController {
 	public List<TweetResponseDto> getTweetByTag(@PathVariable String label) {
 		return hashtagService.getTweetByTag(label);
 	}
-
 }

@@ -1,4 +1,4 @@
-package com.cooksys.twitterclone.entities;
+package com.cooksys.twitterclone.entities.embeddable;
 
 import lombok.Data;
 

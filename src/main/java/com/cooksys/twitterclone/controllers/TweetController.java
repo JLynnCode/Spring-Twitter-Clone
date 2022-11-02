@@ -18,6 +18,7 @@ import com.cooksys.twitterclone.model.HashtagDto;
 import com.cooksys.twitterclone.model.TweetRequestDto;
 import com.cooksys.twitterclone.model.TweetResponseDto;
 import com.cooksys.twitterclone.model.UserResponseDto;
+import com.cooksys.twitterclone.services.TweetService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -25,7 +26,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @RequestMapping("/tweets")
 public class TweetController {
-
+	
+	private final TweetService tweetService;
+	
 	@GetMapping
 	public List<TweetResponseDto> getAllTweets() {
 		return tweetService.getActiveTweets();

@@ -15,8 +15,6 @@ import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import com.cooksys.twitterclone.entities.embeddable.User;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -30,7 +28,6 @@ public class Tweet {
     private Long id;
 
     @ManyToOne
-    @JoinColumn
     private User author;
 
     @Column(nullable = false, updatable = false)
@@ -38,34 +35,37 @@ public class Tweet {
     private Timestamp posted;
 
     @Column(nullable = false)
-    private boolean deleted;
+    private boolean deleted = false;
 
     // @Column(nullable = false)
     private String content;
 
     @ManyToOne
-    @JoinColumn
     private Tweet inReplyTo;
 
     @OneToMany(mappedBy = "replies")
     private List<Tweet> replies;
 
     @ManyToOne
-    @JoinColumn
     private Tweet repostOf;
 
     @OneToMany(mappedBy = "repostOf")
     private List<Tweet> reposts;
 
-    @ManyToMany
-    @JoinTable
+    @ManyToMany(mappedBy = "likedTweets")
     private List<User> likes;
 
     @ManyToMany
-    @JoinTable
+    @JoinTable(
+    		name = "tweet_hashtags",
+    		joinColumns = @JoinColumn(name = "tweet_id"),
+    		inverseJoinColumns = @JoinColumn(name = "hashtag_id"))
     private List<Hashtag> hashtags;
 
     @ManyToMany
-    @JoinTable
-    private List<User> userMentioned;
+    @JoinTable(
+    		name = "user_mentions",
+    		joinColumns = @JoinColumn(name = "tweet_id"),
+    		inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private List<User> usersMentioned;
 }

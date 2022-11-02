@@ -1,6 +1,6 @@
 package com.cooksys.twitterclone.model;
 
-import com.cooksys.twitterclone.entities.Tweet;
+import java.util.List;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class ContextDto {
 	
-	private Tweet target;
-	private Tweet before;
-	private Tweet after;
+	private TweetResponseDto target;
+	private List<TweetResponseDto> before;
+	private List<TweetResponseDto> after;
 }

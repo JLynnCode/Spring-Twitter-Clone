@@ -9,7 +9,7 @@ public class ProfileDto {
 	
 	private String firstName;
 	private String lastName;
-	private String phoneNumber;
+	private String phone;
 	
 	private String email;
 }
