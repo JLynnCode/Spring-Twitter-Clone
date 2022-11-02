@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cooksys.twitterclone.entities.embeddable.Credentials;
+import com.cooksys.twitterclone.entities.Credentials;
 import com.cooksys.twitterclone.model.TweetResponseDto;
 import com.cooksys.twitterclone.model.UserRequestDto;
 import com.cooksys.twitterclone.model.UserResponseDto;

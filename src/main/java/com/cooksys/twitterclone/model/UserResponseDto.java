@@ -2,7 +2,7 @@ package com.cooksys.twitterclone.model;
 
 import java.sql.Timestamp;
 
-import com.cooksys.twitterclone.entities.embeddable.Profile;
+import com.cooksys.twitterclone.entities.Profile;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -16,9 +16,6 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import com.cooksys.twitterclone.entities.embeddable.Credentials;
-import com.cooksys.twitterclone.entities.embeddable.Profile;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

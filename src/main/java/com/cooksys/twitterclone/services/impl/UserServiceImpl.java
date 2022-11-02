@@ -36,7 +36,6 @@ public class UserServiceImpl implements UserService {
 		}
 		
 		return activeUsers;
-		
 	}
 
 	@Override

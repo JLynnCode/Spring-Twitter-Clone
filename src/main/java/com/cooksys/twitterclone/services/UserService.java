@@ -2,7 +2,7 @@ package com.cooksys.twitterclone.services;
 
 import java.util.List;
 
-import com.cooksys.twitterclone.entities.embeddable.Credentials;
+import com.cooksys.twitterclone.entities.Credentials;
 import com.cooksys.twitterclone.model.UserRequestDto;
 import com.cooksys.twitterclone.model.UserResponseDto;
 
