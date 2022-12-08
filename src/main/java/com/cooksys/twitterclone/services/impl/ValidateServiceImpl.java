@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import com.cooksys.twitterclone.entities.Hashtag;
 import com.cooksys.twitterclone.entities.User;
 import com.cooksys.twitterclone.repositories.HashtagRepository;
-import com.cooksys.twitterclone.repositories.TweetRepository;
 import com.cooksys.twitterclone.repositories.UserRepository;
 import com.cooksys.twitterclone.services.ValidateService;
 

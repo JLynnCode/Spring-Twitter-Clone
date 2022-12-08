@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cooksys.twitterclone.entities.Credentials;
 import com.cooksys.twitterclone.model.ContextDto;
-import com.cooksys.twitterclone.model.CredentialsDto;
 import com.cooksys.twitterclone.model.HashtagDto;
 import com.cooksys.twitterclone.model.TweetRequestDto;
 import com.cooksys.twitterclone.model.TweetResponseDto;

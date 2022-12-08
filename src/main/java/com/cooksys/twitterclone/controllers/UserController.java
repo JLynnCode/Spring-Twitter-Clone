@@ -17,7 +17,6 @@ import com.cooksys.twitterclone.entities.Credentials;
 import com.cooksys.twitterclone.model.TweetResponseDto;
 import com.cooksys.twitterclone.model.UserRequestDto;
 import com.cooksys.twitterclone.model.UserResponseDto;
-import com.cooksys.twitterclone.services.TweetService;
 import com.cooksys.twitterclone.services.UserService;
 
 import lombok.RequiredArgsConstructor;
@@ -28,7 +27,6 @@ import lombok.RequiredArgsConstructor;
 public class UserController {
 
 	private final UserService userService;
-	private final TweetService tweetService;
 
 	@GetMapping
 	public List<UserResponseDto> getAllUsers() {
